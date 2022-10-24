@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-south-1:016198078780:task-definition/pms-all:1"
+        LoadBalancerInfo:
+          ContainerName: "authorization"
+          ContainerPort: 9095
